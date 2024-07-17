@@ -1,13 +1,15 @@
-package dev.aniket.VideoCallApp.user;
+package dev.aniket.VideoCallApp.service;
 
+import dev.aniket.VideoCallApp.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
+@Deprecated
 @Service
-public class UserService {
+public class UserServiceInMemory {
 
     private static final List<User> USER_LIST = new ArrayList<>();
 

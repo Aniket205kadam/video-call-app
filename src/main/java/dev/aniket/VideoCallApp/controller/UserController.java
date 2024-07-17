@@ -1,9 +1,9 @@
-package dev.aniket.VideoCallApp.user;
+package dev.aniket.VideoCallApp.controller;
 
+import dev.aniket.VideoCallApp.model.User;
+import dev.aniket.VideoCallApp.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,39 +14,31 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 @Slf4j
 public class UserController {
+//    private final UserServiceInMemory service;
     private final UserService service;
 
     @PostMapping
     public void register(@RequestBody User user) {
+        log.info("Register endpoint was called");
         service.register(user);
     }
 
     @PostMapping("/login")
     public User login(@RequestBody User user) {
-        System.out.println("Email: " + user.getEmail());
+        log.info("login endpoint was called");
+        log.info("login email is " + user.getEmail());
        return service.login(user);
     }
 
-//    @PostMapping("/logout")
-//    public void logout(String email) {
-//        service.logout(email);
-//    }
-
     @PostMapping("/logout")
     public void logout(@RequestBody User user) {
+        log.info("logout endpoint was called");
         service.logout(user.getEmail());
     }
 
     @GetMapping
     public List<User> getAllUsers() {
+        log.info("getAllUsers endpoint was called");
         return service.getAllUsers();
-    }
-
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> handler(Exception exception) {
-        exception.printStackTrace();
-        return ResponseEntity
-                .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body(exception.getMessage());
     }
 }

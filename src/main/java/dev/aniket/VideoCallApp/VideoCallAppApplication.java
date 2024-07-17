@@ -1,11 +1,7 @@
 package dev.aniket.VideoCallApp;
 
-import dev.aniket.VideoCallApp.user.User;
-import dev.aniket.VideoCallApp.user.UserService;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class VideoCallAppApplication {
@@ -14,33 +10,24 @@ public class VideoCallAppApplication {
 		SpringApplication.run(VideoCallAppApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(
-			UserService service
-	) {
-		return args -> {
-			service.register(User
-					.builder()
-					.username("aniket205kadam")
-					.email("aniketrkadam205@gmail.com")
-					.password("2004")
-					.build());
-
-			service.register(User
-					.builder()
-					.username("rohit45sharma")
-					.email("rohit.sharma.45@gmail.com")
-					.password("1234")
-					.build());
-
-			service.register(User
-					.builder()
-					.username("its_rohini")
-					.email("rohini@gmail.com")
-					.password("1234")
-					.build());
-		};
-	}
+//	@Bean
+//	public CommandLineRunner commandLineRunner(
+//			UserService service
+//	) {
+//		return args -> {
+//			service.register(new User(
+//					"aniket",
+//					"aniket@gmail.com",
+//					"password",
+//					"online"));
+//
+//			service.register(new User(
+//					"rohit",
+//					"rohit@gmail.com",
+//					"password",
+//					"online"));
+//		};
+//	}
 
 }
 
