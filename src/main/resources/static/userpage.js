@@ -67,7 +67,7 @@ logoutBtn.addEventListener("click", handleLogout);
 
 function handleNewMeeting() {
     const connectedUser = JSON.parse(localStorage.getItem('connectedUser'));
-    window.open(`videocall.html?username=${connectedUser.username}`, "_blank");
+    window.open(`videocall.html?username=${connectedUser.username}`, "_parent");
 }
 
 // Attach the handleNewMeeting function to the "Create a New Meeting" button

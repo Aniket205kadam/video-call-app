@@ -1,0 +1,259 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+}
+.navup {
+    position: sticky;
+      top: 0;
+      background-color: #fff;
+      padding: 10px 0;
+      z-index: 1000;
+}
+.navup :hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500; 
+}
+
+nav img {
+    height: 40px; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: 400; 
+    transition: color 0.3s ease;
+}
+
+nav ul li a.demo {
+    color: #6a0dad;
+    background: linear-gradient(90deg, #6a0dad, #4b0082); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul li a.resources {
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+nav ul li a:hover {
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+    .info {
+       width: calc(50% - 10px);
+      margin: 5px;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main img {
+  width: 48%;
+  height: 80%;
+  object-fit: cover;
+  margin-left: 110px;
+  margin-top: 20px;
+}
+
+.info {
+  flex: 1;
+  margin-right: 140px;
+  margin-top: 10px;
+}
+
+.info h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.info h1 {
+    font-size: 80px;
+    font-family: 'Bahnschrift';
+}
+
+.info p {
+    font-size: 20px;
+    font-family: 'Bahnschrift';
+}
+
+.btn {
+  margin-top: 50px;
+  background-color: #8624e1;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: grab;
+  margin-bottom: 50px;
+}
+
+.btn:hover {
+  background-color: #090909;
+}
+
+#info2 strong {
+    color: #8624e1;
+}
+
+#info2 {
+    font-size: 20px;
+    font-family: 'Bahnschrift';
+    margin-left: 210px;
+    margin-right: 210px;
+    margin-top: 10px;
+}
+
+#info2 p {
+    font-size: 22px;
+}
+
+.main h1 {
+    font-family: 'Bahnschrift';
+    margin-left: 210px;
+    margin-top: 80px;
+    font-size: 40px;
+}
+
+.para1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.msg {
+    width: calc(50% - 10px);
+      margin: 5px;
+      padding: 30px;
+      box-sizing: border-box;
+}
+
+.para1 img {
+  width: 48%;
+  height: 80%;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.msg {
+  flex: 1;
+  margin-right: 5px;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.msg h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.msg h1 {
+    font-family: 'Bahnschrift';
+}
+
+.msg p {
+    font-size: 20px;
+    font-family: 'Bahnschrift';
+}
+
+.para2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.msg1 {
+    width: calc(50% - 10px);
+      margin: 5px;
+      padding: 30px;
+      box-sizing: border-box;
+}
+
+.para2 img {
+  width: 48%;
+  height: 80%;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.msg1 {
+  flex: 1;
+  margin-right: 5px;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.msg1 h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.msg1 h1 {
+    font-family: 'Bahnschrift';
+}
+
+.msg1 p {
+    font-size: 20px;
+    font-family: 'Bahnschrift';
+}
+
+footer {
+  background-color: #191919;
+  padding: 20px;
+  text-align: center;
+  color: #fcf5f5;
+  clear: both;
+}
