@@ -41,4 +41,10 @@ public class UserController {
         log.info("getAllUsers endpoint was called");
         return service.getAllUsers();
     }
+
+    @GetMapping("/{username}")
+    public List<User> getUser(@PathVariable String username) {
+        System.out.println(username);
+        return null;
+    }
 }
